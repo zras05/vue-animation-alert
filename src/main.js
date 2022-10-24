@@ -1,9 +1,13 @@
-import VueAnimationAlert from './VueAnimationAlert'
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
 
-// 导出模块
-export default VueAnimationAlert
+Vue.config.productionTip = false
 
-// global 情况下 自动安装
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.component('vue-animation-alert', VueAnimationAlert)
-}
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>'
+})

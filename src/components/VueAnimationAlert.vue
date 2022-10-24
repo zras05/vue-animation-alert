@@ -49,16 +49,16 @@
       />
     </div>
     <div class="videoList">
-      <video controls muted ref="hideTaskAudio">
+      <video controls muted ref="awsomeAudio">
         <source src="/static/music/awsome-multy.mp3" type="audio/mpeg" />
       </video>
-      <video controls muted ref="variousExpressAudio">
+      <video controls muted ref="excellentAudio">
         <source src="/static/music/excellent-man.mp3" type="audio/mpeg" />
       </video>
       <video controls muted ref="passAllAudio">
         <source src="/static/music/pass-the-customs.mp3" type="audio/mpeg" />
       </video>
-      <video controls muted ref="mainTaskAudio">
+      <video controls muted ref="perfectAudio">
         <source src="/static/music/perfect-girl.mp3" type="audio/mpeg" />
       </video>
     </div>
@@ -263,7 +263,6 @@ export default {
           this.$refs.perfectPronunciation.classList.add('moveBubbleImg')
           break
       }
-      this.showVoice(type)
       setTimeout(() => {
         switch (type) {
           case 'mainTask':
@@ -399,14 +398,14 @@ export default {
     },
     showVoice (type) {
       switch (type) {
-        case 'mainTask':
-          this.$refs.mainTaskAudio.play()
+        case 'perfect':
+          this.$refs.perfectAudio.play()
           break
-        case 'hideTask':
-          this.$refs.hideTaskAudio.play()
+        case 'awsome':
+          this.$refs.awsomeAudio.play()
           break
-        case 'variousExpress':
-          this.$refs.variousExpressAudio.play()
+        case 'excellent':
+          this.$refs.excellentAudio.play()
           break
         case 'passAll':
           this.$refs.passAllAudio.play()
@@ -418,9 +417,9 @@ export default {
     document.body.addEventListener(
       'mousedown',
       () => {
-        this.$refs.mainTaskAudio.muted = false
-        this.$refs.hideTaskAudio.muted = false
-        this.$refs.variousExpressAudio.muted = false
+        this.$refs.perfectAudio.muted = false
+        this.$refs.awsomeAudio.muted = false
+        this.$refs.excellentAudio.muted = false
         this.$refs.passAllAudio.muted = false
       },
       false
